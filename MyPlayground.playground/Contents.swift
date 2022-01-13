@@ -1,5 +1,7 @@
 //This is a comment
 
+import Darwin
+
 print("Hello World")
 
 /*This is a multiple line comment*/
@@ -50,3 +52,64 @@ print(randomNumber3)
     let password = alphabet.randomElement()! + alphabet.randomElement()! + alphabet.randomElement()! + alphabet.randomElement()! + alphabet.randomElement()! + alphabet.randomElement()! + alphabet.randomElement()!
 
 print(password)
+
+func greeting() {
+    print("Hello")
+}
+
+greeting()
+
+func greeting1() {
+    print("hello")
+    
+    var myName = "juho"
+    
+    print(myName)
+}
+
+func gretting2() {
+    print("hey")
+}
+
+//Create a Function with Input
+//func myFunction(parameter: DataType) {
+
+var myAge = 28
+myAge = 18
+//myAge = "three" 에러. 이미 myName 이라는 데이터 타입 값에 int 정수 값이 들어갔으므로,
+//문자열인 string을 써야하는 "three"는 myName이라는 데이터 타입값에 오지못함
+
+func greeting3(whoToGreet: String) {
+    print("Hello \(whoToGreet)")
+}
+greeting3(whoToGreet: "Lilas")
+greeting3(whoToGreet: "Juho")
+
+//Don't change this code:
+func calculator() {
+  let a = Int(readLine()!)! //First input
+  let b = Int(readLine()!)! //Second input
+  
+  add(n1: a, n2: b)
+  subtract(n1: a, n2: b)
+  multiply(n1: a, n2: b)
+  divide(n1: a, n2: b)
+  
+}
+ 
+//Write your code below this line to make the above function calls work.
+func add(n1:Int, n2:Int) {
+    print(n1+n2)
+}
+ 
+func subtract(n1:Int, n2:Int) {
+    print(n1-n2)
+}
+func multiply(n1:Int, n2:Int) {
+    print(n1*n2)
+}
+func divide(n1:Int, n2:Int) {
+    print(Double(n1)/Double(n2))
+    // I cast the Int value to Double so that the result could be a Double
+}
+
