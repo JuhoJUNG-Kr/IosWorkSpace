@@ -113,3 +113,55 @@ func divide(n1:Int, n2:Int) {
     // I cast the Int value to Double so that the result could be a Double
 }
 
+
+//if/else
+
+func loveCalculator(){
+    let loveScore = Int.random(in: 0...100)
+    if loveScore > 80{
+        print("You love each other like Kanye loves Kanye.")
+    } else if loveScore > 40{
+        print("You go together like Coke and Mentos.")
+    } else {
+            print("You'll be forever alone")
+        }
+}
+
+loveCalculator()
+
+//  == is equal to
+//  != is not equal to
+// > is greater than
+// < is lesser than
+// >= is greater or equal to
+// <= is lesser or equal to
+// a...b Closed Range
+// a..<b Half Open Range
+// ...b One sided Range
+
+func hateCalculator(){
+    let hateScore = Int.random(in: 0...100)
+    switch hateScore {
+    case 81...100:
+        print("fuck you")
+    case 41...80:
+        print("Humm...?")
+    case ...40:
+        print("Hi!")
+    default :
+        print("error!")
+    }
+}
+hateCalculator()
+
+// swich 문은 조건이 적어도 5개 이상 있을 때 사용하자, if 보다 더 빠르고 간결해진다.
+
+var player1Username: String? = nil
+// ? 가 들어가면서 옵셔널 string 으로 변환
+player1Username = "DarkLord"
+
+print(player1Username)
+
+var unwrappedP1Username = player1Username!
+
+print(player1Username!)
