@@ -1,6 +1,7 @@
 //This is a comment
 
 import Darwin
+import Foundation
 
 print("Hello World")
 
@@ -165,3 +166,48 @@ print(player1Username)
 var unwrappedP1Username = player1Username!
 
 print(player1Username!)
+
+
+struct Town {
+    let name = "JuhoLand"
+    var citizens = ["Juho", "Lilas"]
+    var resources = ["Grain": 100, "Ore": 42, "Wool": 75]
+    
+    func fortify() {
+        print("Defences increased!")
+    }
+}
+
+var myTown = Town()
+print(myTown.citizens)
+print("\(myTown.name) has \(myTown.resources["Grain"]!) bags of Grain.")
+
+myTown.citizens.append("keanu Reeves")
+print(myTown.citizens.count)
+
+myTown.fortify()
+
+struct Village {
+    let name : String
+    var citizens: [String]
+    var resources: [String: Int]
+    
+    init(name: String, citizens: [String], resources: [String: Int]) {
+        self.name = name
+        self.citizens = citizens
+        self.resources = resources
+    }
+    func fortify() {
+        print("Defenced increased!")
+    }
+    
+}
+
+var anotherVillage = Village(name: "Lyon", citizens: ["Juho", "Lilas"], resources: ["Grain": 100, "Ore": 42, "Wool": 75])
+anotherVillage.citizens.append("Wilson")
+print(anotherVillage)
+
+var ghostTown = Village(name: "Ghosty McGhostFace", citizens: [], resources: ["TumbleWeed": 1])
+
+ghostTown.fortify()
+
