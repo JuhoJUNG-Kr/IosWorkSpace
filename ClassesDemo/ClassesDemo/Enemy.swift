@@ -1,9 +1,17 @@
 class Enemy {
-    var health = 100
-    var attackStrength = 10
+    var health: Int
+    var attackStrength: Int
+    
+    init(health: Int, attackStrength: Int ) {
+        self.health = health
+        self.attackStrength = attackStrength
+    }
     
     func move() {
         print("Walk forwards.")
+    }
+    func takeDamage(amount: Int){
+        health = health - amount
     }
     
     func attack() {

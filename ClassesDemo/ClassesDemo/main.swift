@@ -1,12 +1,12 @@
-let skeleton = Enemy()
+let skeleton = Enemy(health: 100, attackStrength: 10)
 print(skeleton.health)
 skeleton.move()
 skeleton.attack()
 
-let skeleton2 = Enemy()
-let skeleton3 = Enemy()
+let skeleton1 = Enemy(health: 100, attackStrength: 10)
+let skeleton2 = Enemy(health: 100, attackStrength: 10)
 
-let dragon = Dragon()
+let dragon = Dragon(health: 1000, attackStrength: 100)
 dragon.wingSpan = 5
 dragon.attackStrength = 15
 dragon.talk(speech: "Die!!")
